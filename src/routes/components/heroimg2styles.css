@@ -1,0 +1,60 @@
+.image{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+
+
+.int-img{
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    object-fit: cover;
+}
+.heading{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+.image::after{
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.8;
+}
+.hero-img {
+    height: 100%;
+    width: 100%;
+}
+.hero-img .middle {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    text-align:center;
+}
+.hero-img .middle h1{
+    font-size: 4rem;
+    padding: 0.6rem 0 1.5rem;
+}
+.hero-img .middle h4{
+    font-size: 1.44rem;
+    font-weight: 200;
+    text-transform: uppercase;
+}@media screen and (max-width : 640px){
+    .hero-img .middle h1{
+        font-size: 3rem;
+    }
+    .hero-img .middle h4{
+        font-size: 1.4rem;
+    }
+}
