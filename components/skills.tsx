@@ -1,3 +1,5 @@
+"use client"
+
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 
@@ -5,12 +7,12 @@ export function Skills() {
   const skillCategories = [
     {
       category: "Frontend Development",
-      skills: ["JavaScript", "TypeScript", "React", "React Native", "HTML5", "CSS3","ExtJS"],
+      skills: ["JavaScript", "TypeScript", "React", "React Native", "HTML5", "CSS3", "ExtJS"],
       color: "bg-blue-500/10 text-blue-700 border-blue-200 dark:text-blue-300 dark:border-blue-800",
     },
     {
       category: "Backend Development",
-      skills: ["Node.js",  "Java", ".NET", "API Development", "Microservices", "PHP"],
+      skills: ["Node.js", "Java", ".NET", "API Development", "Microservices", "PHP"],
       color: "bg-green-500/10 text-green-700 border-green-200 dark:text-green-300 dark:border-green-800",
     },
     {
@@ -31,22 +33,26 @@ export function Skills() {
   ]
 
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
-      <div className="max-w-6xl mx-auto">
+    <section id="skills" className="py-24 px-4 sm:px-6 lg:px-16 bg-gradient-to-b from-background via-background/90 to-background/95">
+      <div className="max-w-7xl mx-auto">
+        {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="font-heading text-4xl sm:text-5xl font-bold mb-4 text-balance">Skills & Technologies</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto text-pretty">
+          <h2 className="font-heading text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+            Skills & Technologies
+          </h2>
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
             A comprehensive toolkit spanning frontend, backend, databases, and specialized fintech solutions
           </p>
         </div>
 
+        {/* Skill Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {skillCategories.map((category, index) => (
             <Card
               key={index}
-              className="group hover:shadow-lg transition-all duration-300 border-0 bg-card/50 backdrop-blur-sm"
+              className="group border-0 bg-card/50 backdrop-blur-md rounded-3xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
             >
-              <CardContent className="p-6">
+              <CardContent className="text-center">
                 <h3 className="font-heading text-lg font-semibold mb-4 text-center group-hover:text-primary transition-colors">
                   {category.category}
                 </h3>
@@ -65,21 +71,30 @@ export function Skills() {
           ))}
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        {/* Statistics */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center mt-12">
           <div className="space-y-2">
-            <div className="text-3xl font-bold text-primary">3+</div>
+            <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+              3+
+            </div>
             <div className="text-sm text-muted-foreground">Years Experience</div>
           </div>
           <div className="space-y-2">
-            <div className="text-3xl font-bold text-primary">15+</div>
+            <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+              15+
+            </div>
             <div className="text-sm text-muted-foreground">Technologies</div>
           </div>
           <div className="space-y-2">
-            <div className="text-3xl font-bold text-primary">6+</div>
+            <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+              6+
+            </div>
             <div className="text-sm text-muted-foreground">Major Projects</div>
           </div>
           <div className="space-y-2">
-            <div className="text-3xl font-bold text-primary">100%</div>
+            <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+              100%
+            </div>
             <div className="text-sm text-muted-foreground">Client Satisfaction</div>
           </div>
         </div>
