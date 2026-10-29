@@ -38,7 +38,7 @@ export function Experience() {
       case "cbe-workflow":
         return "/images/projects/cbe-workflow/cbe-dashboard.png"
       case "cbe-lease":
-        return "/property-management-system-with-listings-and-searc.jpg"
+        return "/images/projects/cbe-lease/cbe-lease-dashboard.png"
       case "opp-membership":
         return "/opp.png"
       case "kebele-management":

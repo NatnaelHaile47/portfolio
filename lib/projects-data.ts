@@ -141,6 +141,20 @@ export const projectsData: ProjectItem[] = [
       "SQL Server optimized indexes for fast multi-branch search and reporting queries.",
       "Role-based action guards preventing unauthorized modifications after approval submission.",
     ],
+    screenshots: [
+      {
+        src: "/images/projects/cbe-lease/cbe-lease-dashboard.png",
+        title: "CBE Region Lease Approval Portal Dashboard",
+        description:
+          "Executive VP Retail Banking dashboard showing total lease requests (25), pending approval sign-offs (10), 305 contracts expiring within 3 months, recent branch lease submissions, and request status distribution analytics.",
+      },
+      {
+        src: "/images/projects/cbe-lease/cbe-lease-active-branches.png",
+        title: "Active Nationwide Branch Leases Directory",
+        description:
+          "Enterprise contract monitoring directory managing 1,920+ active CBE branch premises nationwide, rental costs in ETB/month, square meter dimensions, expiration countdowns, and renewal status.",
+      },
+    ],
     githubLinks: [
       { label: "NatnaelHaile47 (Primary)", url: primaryGithub, isPrimary: true },
       { label: "NatnaelWalletbirr (Additional)", url: additionalGithub },
