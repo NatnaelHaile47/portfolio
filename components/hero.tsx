@@ -1,13 +1,8 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import {
-  ArrowDown,
-  Github,
-  Linkedin,
-  Mail,
-  ExternalLink,
-} from "lucide-react"
+import { ArrowDown, Github, Linkedin, Mail, Download, ExternalLink } from "lucide-react"
+import Image from "next/image"
 
 export function Hero() {
   const primaryGithubUrl = "https://github.com/NatnaelHaile47"
@@ -15,115 +10,151 @@ export function Hero() {
   const linkedinUrl = "https://www.linkedin.com/in/natnael-haile-72614b255/"
   const emailUrl = "mailto:natihaile6568@gmail.com"
 
+  const handleDownload = () => {
+    const link = document.createElement("a")
+    link.href = "/Natnael_Haile CV.pdf"
+    link.download = "Natnael_Haile_CV.pdf"
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+
   return (
-    <section className="relative min-h-[88vh] flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20 pb-16 overflow-hidden">
-      {/* Subtle modern background gradient orbs */}
-      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl pointer-events-none -z-10" />
-      <div className="absolute top-1/3 right-1/4 w-[350px] h-[350px] bg-secondary/10 rounded-full blur-3xl pointer-events-none -z-10" />
+    <section className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-16 pt-24 pb-16 overflow-hidden">
+      {/* Animated gradient background from GitHub design */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary/20 via-secondary/20 to-accent/20 animate-gradient" />
 
-      <div className="max-w-4xl mx-auto text-center relative z-10">
-        {/* Avatar / Monogram */}
-        <div className="relative mb-6 mx-auto w-28 h-28 sm:w-32 sm:h-32">
-          <div className="absolute -inset-1 rounded-full bg-gradient-to-tr from-primary via-accent to-secondary opacity-70 blur-sm" />
-          <div className="relative w-full h-full rounded-full bg-card border-2 border-border flex items-center justify-center shadow-xl">
-            <span className="font-heading text-3xl sm:text-4xl font-extrabold bg-gradient-to-br from-foreground via-foreground/90 to-primary bg-clip-text text-transparent">
-              NH
+      <div className="max-w-7xl w-full grid lg:grid-cols-2 gap-12 items-center">
+        {/* Left content */}
+        <div className="text-center lg:text-left space-y-6">
+          <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight">
+            <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+              Natnael Haile
             </span>
-          </div>
-        </div>
+          </h1>
 
-        {/* Main Heading & Titles */}
-        <h1 className="font-heading text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight mb-4 text-balance">
-          Natnael Haile
-        </h1>
+          <h2 className="text-2xl sm:text-3xl text-foreground font-semibold flex items-center justify-center lg:justify-start gap-2 flex-wrap">
+            <span>Senior Software Developer</span>
+            <span className="text-primary font-bold hidden sm:inline">•</span>
+            <span className="text-primary">Full-Stack &amp; Deployment Engineer</span>
+          </h2>
 
-        <h2 className="text-xl sm:text-2xl lg:text-3xl font-medium text-foreground/80 mb-6 flex items-center justify-center gap-2 flex-wrap">
-          <span>Senior Software Developer</span>
-          <span className="text-primary font-bold hidden sm:inline">•</span>
-          <span className="text-primary">Full-Stack &amp; Deployment Engineer</span>
-        </h2>
+          <p className="text-lg sm:text-xl text-muted-foreground max-w-xl leading-relaxed text-pretty">
+            Engineering scalable systems for the{" "}
+            <strong className="text-foreground font-semibold">Commercial Bank of Ethiopia (CBE)</strong>,{" "}
+            <strong className="text-foreground font-semibold">Mackmil P.L.C</strong>,{" "}
+            <strong className="text-foreground font-semibold">Binget Microfinance</strong>, and{" "}
+            <strong className="text-foreground font-semibold">Eaglist</strong> with 4 years of proven production delivery.
+          </p>
 
-        <p className="text-base sm:text-lg lg:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed mb-10 text-pretty">
-          Engineering and deploying production systems for the{" "}
-          <strong className="text-foreground font-semibold">Commercial Bank of Ethiopia (CBE)</strong>,{" "}
-          <strong className="text-foreground font-semibold">Mackmil P.L.C</strong>,{" "}
-          <strong className="text-foreground font-semibold">Binget Microfinance</strong>, and{" "}
-          <strong className="text-foreground font-semibold">Eaglist</strong>.
-        </p>
-
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-          <Button size="lg" className="w-full sm:w-auto rounded-full shadow-lg group" asChild>
-            <a href="#experience" className="inline-flex items-center">
-              Explore Projects &amp; Deployments
-              <ArrowDown className="ml-2 h-4 w-4 transition-transform group-hover:translate-y-0.5" />
-            </a>
-          </Button>
-
-          <Button variant="outline" size="lg" className="w-full sm:w-auto rounded-full bg-card/60 backdrop-blur-sm" asChild>
-            <a href="#contact">Contact Me</a>
-          </Button>
-
-          {/* GitHub Links */}
-          <div className="flex gap-2 w-full sm:w-auto justify-center">
-            <Button variant="secondary" size="lg" className="rounded-full flex-1 sm:flex-initial" asChild>
-              <a href={primaryGithubUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
-                <Github className="mr-2 h-4 w-4" />
-                NatnaelHaile47
-                <ExternalLink className="ml-1.5 h-3.5 w-3.5 opacity-60" />
+          {/* CTA buttons */}
+          <div className="flex flex-wrap gap-4 pt-2 justify-center lg:justify-start items-center">
+            <Button
+              size="lg"
+              className="group hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl rounded-full"
+              asChild
+            >
+              <a href="#experience" className="flex items-center">
+                View Projects
+                <ArrowDown className="ml-2 h-5 w-5 group-hover:translate-y-1 transition-transform" />
               </a>
             </Button>
-            <Button variant="outline" size="lg" className="rounded-full" asChild title="Additional GitHub (NatnaelWalletbirr)">
-              <a href={additionalGithubUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center">
-                <Github className="h-4 w-4" />
-                <span className="sr-only">Additional GitHub (NatnaelWalletbirr)</span>
+
+            <Button
+              variant="outline"
+              size="lg"
+              className="hover:scale-105 transition-all duration-300 border-2 rounded-full bg-card/60 backdrop-blur-sm"
+              asChild
+            >
+              <a href="#contact" className="flex items-center">
+                Contact Me
+                <Mail className="ml-2 h-5 w-5" />
               </a>
             </Button>
+
+            <Button
+              variant="secondary"
+              size="lg"
+              className="hover:scale-105 transition-all duration-300 shadow-md rounded-full"
+              onClick={handleDownload}
+            >
+              <Download className="mr-2 h-5 w-5" />
+              Download CV
+            </Button>
+          </div>
+
+          {/* Quick Metrics Bar with 4 Years Experience */}
+          <div className="grid grid-cols-3 gap-4 pt-6 border-t border-border/40 max-w-lg mx-auto lg:mx-0">
+            <div className="p-3 rounded-2xl bg-card/60 backdrop-blur-sm border border-border/50 text-center">
+              <div className="font-heading text-2xl sm:text-3xl font-extrabold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                4
+              </div>
+              <div className="text-xs text-muted-foreground mt-0.5">Years Experience</div>
+            </div>
+            <div className="p-3 rounded-2xl bg-card/60 backdrop-blur-sm border border-border/50 text-center">
+              <div className="font-heading text-2xl sm:text-3xl font-extrabold text-foreground">
+                9+
+              </div>
+              <div className="text-xs text-muted-foreground mt-0.5">Production Systems</div>
+            </div>
+            <div className="p-3 rounded-2xl bg-card/60 backdrop-blur-sm border border-border/50 text-center">
+              <div className="font-heading text-2xl sm:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400">
+                100%
+              </div>
+              <div className="text-xs text-muted-foreground mt-0.5">Production Deployed</div>
+            </div>
           </div>
         </div>
 
-        {/* Quick Metrics Bar with 4 Years Experience */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 max-w-3xl mx-auto pt-6 border-t border-border/60">
-          <div className="p-3 rounded-xl bg-card/40 border border-border/40">
-            <div className="font-heading text-2xl sm:text-3xl font-extrabold text-foreground">4</div>
-            <div className="text-xs text-muted-foreground mt-0.5">Years Experience</div>
+        {/* Right side profile image + socials */}
+        <div className="flex flex-col items-center lg:items-end space-y-6">
+          <div className="relative w-64 h-64 sm:w-80 sm:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-2xl border-4 border-primary/40 animate-float bg-muted">
+            <Image
+              src="/profile.jpg"
+              alt="Natnael Haile"
+              fill
+              priority
+              className="object-cover"
+            />
           </div>
-          <div className="p-3 rounded-xl bg-card/40 border border-border/40">
-            <div className="font-heading text-2xl sm:text-3xl font-extrabold text-foreground">9+</div>
-            <div className="text-xs text-muted-foreground mt-0.5">Production Systems</div>
-          </div>
-          <div className="p-3 rounded-xl bg-card/40 border border-border/40">
-            <div className="font-heading text-2xl sm:text-3xl font-extrabold text-emerald-600 dark:text-emerald-400">100%</div>
-            <div className="text-xs text-muted-foreground mt-0.5">Production Deployed</div>
-          </div>
-          <div className="p-3 rounded-xl bg-card/40 border border-border/40">
-            <div className="font-heading text-2xl sm:text-3xl font-extrabold text-primary">CBE</div>
-            <div className="text-xs text-muted-foreground mt-0.5">Workflow &amp; Lease</div>
-          </div>
-        </div>
 
-        {/* Social Links */}
-        <div className="flex justify-center items-center space-x-4 mt-8">
-          <Button variant="ghost" size="icon" asChild className="rounded-full hover:bg-primary/10 hover:text-primary" title="Primary GitHub: NatnaelHaile47">
-            <a href={primaryGithubUrl} target="_blank" rel="noopener noreferrer" aria-label="Natnael's Primary GitHub">
-              <Github className="h-5 w-5" />
+          {/* Social icons under image */}
+          <div className="flex gap-4 flex-wrap justify-center">
+            <a
+              href={primaryGithubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Primary GitHub: NatnaelHaile47"
+              className="h-12 w-12 flex items-center justify-center rounded-full bg-background/70 backdrop-blur-md shadow-md border border-border hover:scale-110 hover:border-primary transition-all text-foreground"
+            >
+              <Github className="h-6 w-6" />
             </a>
-          </Button>
-          <Button variant="ghost" size="icon" asChild className="rounded-full hover:bg-primary/10 hover:text-primary" title="Additional GitHub: NatnaelWalletbirr">
-            <a href={additionalGithubUrl} target="_blank" rel="noopener noreferrer" aria-label="Natnael's Additional GitHub">
-              <Github className="h-5 w-5 text-muted-foreground hover:text-foreground" />
+            <a
+              href={additionalGithubUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Additional GitHub: NatnaelWalletbirr"
+              className="h-12 w-12 flex items-center justify-center rounded-full bg-background/70 backdrop-blur-md shadow-md border border-border hover:scale-110 hover:border-primary transition-all text-muted-foreground hover:text-foreground"
+            >
+              <Github className="h-6 w-6" />
             </a>
-          </Button>
-          <Button variant="ghost" size="icon" asChild className="rounded-full hover:bg-primary/10 hover:text-primary" title="LinkedIn Profile">
-            <a href={linkedinUrl} target="_blank" rel="noopener noreferrer" aria-label="Natnael's LinkedIn Profile">
-              <Linkedin className="h-5 w-5" />
+            <a
+              href={linkedinUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              title="LinkedIn Profile"
+              className="h-12 w-12 flex items-center justify-center rounded-full bg-background/70 backdrop-blur-md shadow-md border border-border hover:scale-110 hover:border-primary transition-all text-foreground"
+            >
+              <Linkedin className="h-6 w-6" />
             </a>
-          </Button>
-          <Button variant="ghost" size="icon" asChild className="rounded-full hover:bg-primary/10 hover:text-primary" title="Direct Email">
-            <a href={emailUrl} aria-label="Email Natnael directly">
-              <Mail className="h-5 w-5" />
+            <a
+              href={emailUrl}
+              title="Direct Email (natihaile6568@gmail.com)"
+              className="h-12 w-12 flex items-center justify-center rounded-full bg-background/70 backdrop-blur-md shadow-md border border-border hover:scale-110 hover:border-primary transition-all text-foreground"
+            >
+              <Mail className="h-6 w-6" />
             </a>
-          </Button>
+          </div>
         </div>
       </div>
     </section>

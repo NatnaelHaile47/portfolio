@@ -1,82 +1,108 @@
-import { Badge } from "@/components/ui/badge"
+"use client"
+
 import { Card, CardContent } from "@/components/ui/card"
-import { ShieldCheck, Server, Layers, Rocket } from "lucide-react"
+import { Badge } from "@/components/ui/badge"
+import { Code, Users, Zap, ShieldCheck, Server, Layers, Rocket } from "lucide-react"
 
 export function About() {
-  const pillars = [
+  const highlights = [
     {
-      icon: <Server className="h-5 w-5 text-indigo-600 dark:text-indigo-400" />,
-      title: "Full Lifecycle & Production Deployment",
-      desc: "Hands-on experience taking systems from architecture to containerized production on Linux, Docker, CI/CD pipelines, reverse proxies, and zero-downtime database deployments.",
+      icon: Server,
+      title: "Production Deployment Lead",
+      description:
+        "Full-cycle deployment specialist managing containerized Linux servers, Docker Compose, CI/CD pipelines, and zero-downtime database updates.",
     },
     {
-      icon: <ShieldCheck className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />,
-      title: "Commercial Bank of Ethiopia (CBE)",
-      desc: "Engineered CBE's Workflow Management System and Lease Management System with dynamic role-based access control (RBAC), multi-level approvals, and Oracle / SQL Server databases.",
+      icon: ShieldCheck,
+      title: "CBE Banking Systems",
+      description:
+        "Engineered CBE's Workflow Management and Lease Management systems with dynamic RBAC, meeting coordination, and Oracle / SQL Server databases.",
     },
     {
-      icon: <Layers className="h-5 w-5 text-blue-600 dark:text-blue-400" />,
-      title: "Mackmil P.L.C & Public Systems",
-      desc: "Delivered the Oromia Prosperity Party Membership System with integrated Jitsi video conferencing and the municipal Kebele Management System using Next.js, Node.js, and PostgreSQL.",
+      icon: Layers,
+      title: "Mackmil Public Platforms",
+      description:
+        "Delivered Oromia Prosperity Party Membership System with integrated Jitsi video conferencing and the municipal Kebele Management System.",
     },
     {
-      icon: <Rocket className="h-5 w-5 text-amber-600 dark:text-amber-400" />,
-      title: "Binget Microfinance & Eaglist",
-      desc: "Developed Core Banking and BingetBirr Mobile Money for Binget Microfinance, and the Eaglist cross-platform marketplace mobile application for vehicles, properties, and electronics.",
+      icon: Rocket,
+      title: "Fintech & Mobile Marketplace",
+      description:
+        "Developed Core Banking & BingetBirr for Binget Microfinance, and the Eaglist cross-platform marketplace mobile app for vehicles and properties.",
     },
   ]
 
   return (
-    <section id="about" className="py-24 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <Badge
-            variant="outline"
-            className="mb-3 px-3 py-1 text-xs uppercase tracking-wider font-semibold border-primary/30 text-primary"
-          >
-            Professional Overview
-          </Badge>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight mb-4">
-            About Natnael Haile
+    <section id="about" className="py-24 px-4 sm:px-6 lg:px-16 bg-gradient-to-b from-background via-background/90 to-background/95">
+      <div className="max-w-7xl mx-auto">
+        {/* Section Header with GitHub Gradient Text */}
+        <div className="text-center mb-16">
+          <h2 className="font-heading text-4xl sm:text-5xl font-bold mb-4 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+            About Me
           </h2>
-          <p className="text-base sm:text-lg text-muted-foreground text-pretty">
-            Senior Software Developer &amp; Deployment Specialist with 4 years of experience delivering enterprise systems,
-            financial applications, and cross-platform mobile apps.
+          <p className="text-lg text-muted-foreground max-w-3xl mx-auto text-pretty leading-relaxed">
+            Senior Software Developer &amp; Deployment Specialist architecting secure, mission-critical systems across banking, government, and mobile platforms.
           </p>
         </div>
 
-        {/* Narrative & Details */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center mb-12">
-          <div className="lg:col-span-7 bg-card rounded-2xl p-6 sm:p-8 border border-border shadow-sm space-y-4">
-            <h3 className="font-heading text-xl sm:text-2xl font-bold">
-              Engineering Scalable Systems from Concept to Production
-            </h3>
-            <p className="text-sm sm:text-base leading-relaxed text-muted-foreground">
-              With 4 years of focused engineering experience, I architect, build, and deploy high-reliability software solutions.
-              My work includes developing the Workflow and Lease Management systems for the{" "}
-              <strong className="text-foreground font-semibold">Commercial Bank of Ethiopia (CBE)</strong>, leading the OPP
-              Membership and Kebele systems at <strong className="text-foreground font-semibold">Mackmil P.L.C</strong>,
-              implementing Core Banking and Mobile Money for <strong className="text-foreground font-semibold">Binget Microfinance</strong>,
-              and building the <strong className="text-foreground font-semibold">Eaglist</strong> mobile marketplace.
-            </p>
-            <p className="text-sm sm:text-base leading-relaxed text-muted-foreground">
-              Across every project, I manage the complete delivery cycle: full-stack development with TypeScript, .NET Core,
-              Node.js, Next.js, and React Native, paired with production DevOps, database clustering (PostgreSQL, Oracle, SQL Server),
-              and containerized Linux deployments.
-            </p>
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
+          {/* Left: About text + badges */}
+          <div className="space-y-8">
+            <div className="bg-card/50 backdrop-blur-md rounded-3xl p-8 border border-border/40 shadow-lg hover:shadow-xl transition-all duration-300">
+              <p className="text-lg leading-relaxed text-card-foreground text-pretty mb-6">
+                I am a <span className="text-primary font-semibold">senior software developer and deployment engineer</span> with{" "}
+                <span className="text-primary font-semibold">4 years</span> of dedicated engineering experience architecting and delivering
+                high-reliability production solutions.
+              </p>
+              <p className="text-lg leading-relaxed text-card-foreground text-pretty mb-6">
+                My career encompasses building the Workflow and Lease Management systems for the{" "}
+                <strong className="text-foreground font-semibold">Commercial Bank of Ethiopia (CBE)</strong>, leading the OPP
+                Membership and Kebele systems at <strong className="text-foreground font-semibold">Mackmil P.L.C</strong>,
+                implementing Core Banking and Mobile Money for <strong className="text-foreground font-semibold">Binget Microfinance</strong>,
+                and developing the <strong className="text-foreground font-semibold">Eaglist</strong> mobile marketplace.
+              </p>
+              <p className="text-lg leading-relaxed text-card-foreground text-pretty">
+                I manage the complete development and operations pipeline: modern frontend interfaces (Next.js, React, React Native), robust backends
+                (.NET Core, Node.js), scalable databases (PostgreSQL, Oracle, SQL Server), and automated Linux server deployments.
+              </p>
+            </div>
+
+            <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
+              <Badge variant="secondary" className="px-4 py-2 hover:scale-105 transition-all duration-200 text-xs font-semibold">
+                4 Years Experience
+              </Badge>
+              <Badge variant="secondary" className="px-4 py-2 hover:scale-105 transition-all duration-200 text-xs font-semibold">
+                Commercial Bank of Ethiopia
+              </Badge>
+              <Badge variant="secondary" className="px-4 py-2 hover:scale-105 transition-all duration-200 text-xs font-semibold">
+                Mackmil P.L.C
+              </Badge>
+              <Badge variant="secondary" className="px-4 py-2 hover:scale-105 transition-all duration-200 text-xs font-semibold">
+                Binget Microfinance
+              </Badge>
+              <Badge variant="secondary" className="px-4 py-2 hover:scale-105 transition-all duration-200 text-xs font-semibold">
+                Eaglist Marketplace
+              </Badge>
+            </div>
           </div>
 
-          <div className="lg:col-span-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
-            {pillars.map((pillar, i) => (
-              <Card key={i} className="border-border/60 bg-muted/30 hover:bg-card hover:border-primary/40 transition-colors">
-                <CardContent className="p-4 flex items-start space-x-3.5">
-                  <div className="p-2 rounded-lg bg-background border border-border/60 shrink-0">
-                    {pillar.icon}
+          {/* Right: Highlights cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {highlights.map((highlight, index) => (
+              <Card
+                key={index}
+                className="group border border-border/40 bg-card/50 backdrop-blur-md rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-1"
+              >
+                <CardContent className="text-center p-0">
+                  <div className="w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-tr from-primary/10 via-secondary/20 to-accent/20 flex items-center justify-center group-hover:scale-110 transition-transform border border-border/50">
+                    <highlight.icon className="h-6 w-6 text-primary" />
                   </div>
-                  <div className="space-y-1">
-                    <h4 className="font-heading font-semibold text-sm text-foreground">{pillar.title}</h4>
-                    <p className="text-xs text-muted-foreground leading-relaxed">{pillar.desc}</p>
-                  </div>
+                  <h3 className="font-heading font-semibold mb-2 group-hover:text-primary transition-colors text-base">
+                    {highlight.title}
+                  </h3>
+                  <p className="text-xs sm:text-sm text-muted-foreground text-pretty leading-relaxed">
+                    {highlight.description}
+                  </p>
                 </CardContent>
               </Card>
             ))}
