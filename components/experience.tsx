@@ -38,6 +38,7 @@ export function Experience() {
       case "cbe-workflow":
         return "/images/projects/cbe-workflow/cbe-dashboard.png"
       case "cbe-lease":
+      case "cbe-atm-lease":
         return "/images/projects/cbe-lease/cbe-lease-dashboard.png"
       case "opp-membership":
         return "/opp.png"

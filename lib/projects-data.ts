@@ -161,6 +161,63 @@ export const projectsData: ProjectItem[] = [
     ],
   },
   {
+    id: "cbe-atm-lease",
+    title: "ATM Lease Request System",
+    organization: "Commercial Bank of Ethiopia (CBE)",
+    platformType: "web",
+    platformLabel: "Web System",
+    tagline: "Off-site and branch ATM location lease request, multi-ATM branch allocation, and approval workflow system.",
+    description:
+      "Enterprise ATM lease request platform for Commercial Bank of Ethiopia managing site requisitions, landlord negotiations, multi-ATM per branch allocations, and multi-tier approval workflows.",
+    detailedOverview: [
+      "Engineered for the Commercial Bank of Ethiopia (CBE) as a specialized extension of the enterprise lease management platform, tailored specifically for ATM terminal placement across Ethiopia.",
+      "Shares the core lease information schema and approval workflows with branch leasing, with crucial extensions supporting 1-to-many branch-to-ATM allocations (a single bank branch oversees multiple off-site or on-site ATMs).",
+      "Tracks ATM site appraisals, landlord negotiations, power and connectivity infrastructure clearance, rental rate schedules, and scheduled renewal/decommission notices.",
+    ],
+    role: "Full-Stack Solutions Developer & Production Deployment",
+    deployment:
+      "Deployed on CBE infrastructure utilizing Microsoft SQL Server, .NET Core API, IIS/Docker containerization, and automated background jobs.",
+    deploymentDetails: [
+      "Enterprise .NET Core and SQL Server database schema with relational 1:N branch-to-ATM mapping.",
+      "Automated daily background jobs alerting facility managers of upcoming ATM lease expirations.",
+      "Multi-level approval state engine enforcing validation before landlord contract disbursement.",
+    ],
+    features: [
+      "1-to-Many Branch ATM Management: A single parent branch can initiate, monitor, and manage multiple ATM leases across its territory",
+      "ATM Site Requisition & Feasibility: Multi-criteria evaluation of foot traffic, accessibility, 24/7 security, power supply, and network readiness",
+      "Configurable Multi-Tier Approval Workflow: Dynamic sign-off routing across Branch Managers, District Directors, Facilities, and Executive Committees",
+      "Contract & Landlord Terms: Automated rental calculation in ETB, payment installment schedules, advance rent tracking, and stamp duty records",
+      "Automated Renewal & Expiry Alerts: Timely reminders 3 to 6 months prior to lease expiration with one-click renewal initiation",
+      "Relocation & Decommission Workflows: Managed process for transferring underperforming ATM sites to higher-yield retail locations",
+      "Centralized Document Repository: Digital archiving of site lease deeds, municipal permits, landlord IDs, and legal clearance sign-offs",
+      "Comprehensive Analytics & Audit Trail: Complete history of every review note, approval timestamp, and regional ATM expenditure",
+    ],
+    tech: ["TypeScript", ".NET Core", "C#", "SQL Server", "RESTful APIs", "Docker", "Enterprise Security"],
+    architectureHighlights: [
+      "Relational branch-to-ATM hierarchy supporting multiple active terminals per administrative branch.",
+      "Reusable workflow state machine compatible with CBE's core branch lease approval pipeline.",
+      "Optimized SQL queries and indexes for fast cross-regional ATM lease searching and SLA tracking.",
+    ],
+    screenshots: [
+      {
+        src: "/images/projects/cbe-lease/cbe-lease-dashboard.png",
+        title: "CBE Region Lease Approval Portal - ATM & Branch Dashboard",
+        description:
+          "Executive VP Retail Banking dashboard showing total requests, pending approval sign-offs, ATM site contract tracking, and approval breakdown.",
+      },
+      {
+        src: "/images/projects/cbe-lease/cbe-lease-active-branches.png",
+        title: "Active ATM & Branch Leases Directory",
+        description:
+          "Enterprise contract monitoring directory managing nationwide branch and ATM leases, rental costs in ETB/month, location details, and expiration countdowns.",
+      },
+    ],
+    githubLinks: [
+      { label: "NatnaelHaile47 (Primary)", url: primaryGithub, isPrimary: true },
+      { label: "NatnaelWalletbirr (Additional)", url: additionalGithub },
+    ],
+  },
+  {
     id: "opp-membership",
     title: "OPP Membership Management System",
     organization: "Mackmil P.L.C",

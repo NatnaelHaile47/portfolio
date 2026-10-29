@@ -93,7 +93,7 @@ export function Hero() {
             </div>
             <div className="p-3 rounded-2xl bg-card/60 backdrop-blur-sm border border-border/50 text-center">
               <div className="font-heading text-2xl sm:text-3xl font-extrabold text-foreground">
-                9+
+                10+
               </div>
               <div className="text-xs text-muted-foreground mt-0.5">Production Systems</div>
             </div>

@@ -136,7 +136,7 @@ export function Skills() {
           </div>
           <div className="space-y-1.5 p-4 rounded-2xl bg-card/40 backdrop-blur-sm border border-border/40">
             <div className="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-              9+
+              10+
             </div>
             <div className="text-sm font-medium text-muted-foreground">Production Systems</div>
           </div>
