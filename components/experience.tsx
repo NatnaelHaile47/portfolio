@@ -36,7 +36,7 @@ export function Experience() {
     }
     switch (id) {
       case "cbe-workflow":
-        return "/clean-admin-dashboard-with-data-tables-and-managem.jpg"
+        return "/images/projects/cbe-workflow/cbe-dashboard.png"
       case "cbe-lease":
         return "/property-management-system-with-listings-and-searc.jpg"
       case "opp-membership":

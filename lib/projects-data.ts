@@ -68,6 +68,38 @@ export const projectsData: ProjectItem[] = [
       "Oracle Entity Framework Core with optimized index strategies for high-frequency task transactions.",
       "JWT-based authentication integrated with bank Active Directory and dynamic permission caching.",
     ],
+    screenshots: [
+      {
+        src: "/images/projects/cbe-workflow/cbe-dashboard.png",
+        title: "CBE Nexus Workflow Dashboard & Operational Metrics",
+        description:
+          "Live executive dashboard displaying real-time synchronization, pending approval alerts, overdue task indicators, active meeting counts, and key performance KPIs across departments.",
+      },
+      {
+        src: "/images/projects/cbe-workflow/cbe-task-management.png",
+        title: "Enterprise Task Management & Detailed Workflow Tracking",
+        description:
+          "Task assignment and review interface with status badges, priority levels, workflow audit trails, subtask breakdowns, deferral history, and memorandum attachments.",
+      },
+      {
+        src: "/images/projects/cbe-workflow/cbe-approvals.png",
+        title: "Multi-Level Task & Delegation Completion Approvals",
+        description:
+          "Hierarchical authorization queue showing multi-tiered approval workflows (Division Level, Direct Review, President/CEO Access), SLA tracking, and one-click execution.",
+      },
+      {
+        src: "/images/projects/cbe-workflow/cbe-chat-communication.png",
+        title: "Inter-Departmental Case Discussions & Instant Messaging",
+        description:
+          "Secure internal collaboration portal featuring channel management, case-specific group threads, direct staff messaging, and real-time read receipts.",
+      },
+      {
+        src: "/images/projects/cbe-workflow/cbe-reports.png",
+        title: "User Accomplishment & Departmental SLA Analytics",
+        description:
+          "Enterprise reporting suite with staff performance evaluation, completion rates, on-time SLA metrics, and interactive drilldown analysis.",
+      },
+    ],
     githubLinks: [
       { label: "NatnaelHaile47 (Primary)", url: primaryGithub, isPrimary: true },
       { label: "NatnaelWalletbirr (Additional)", url: additionalGithub },
