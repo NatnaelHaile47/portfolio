@@ -42,8 +42,8 @@ export function Contact() {
   } | null>(null)
 
   const contactEmail = "natihaile6568@gmail.com"
-  const primaryGithub = "https://github.com/NatnaelWalletbirr"
-  const additionalGithub = "https://github.com/NatnaelHaile"
+  const primaryGithub = "https://github.com/NatnaelHaile47"
+  const additionalGithub = "https://github.com/NatnaelWalletbirr"
   const linkedinProfile = "https://www.linkedin.com/in/natnael-haile-72614b255/"
 
   const handleChange = (
@@ -343,7 +343,7 @@ export function Contact() {
                 <div className="space-y-2 pt-1">
                   <div className="flex items-center justify-between p-2 rounded-lg bg-muted/50 border border-border/60">
                     <div className="text-xs">
-                      <span className="font-semibold text-foreground">NatnaelWalletbirr</span>
+                      <span className="font-semibold text-foreground">NatnaelHaile47</span>
                       <span className="text-[10px] text-primary ml-1.5 font-medium">(Primary)</span>
                     </div>
                     <Button variant="ghost" size="sm" asChild className="h-7 text-xs px-2.5">
@@ -355,7 +355,7 @@ export function Contact() {
 
                   <div className="flex items-center justify-between p-2 rounded-lg bg-muted/50 border border-border/60">
                     <div className="text-xs">
-                      <span className="font-semibold text-foreground">NatnaelHaile</span>
+                      <span className="font-semibold text-foreground">NatnaelWalletbirr</span>
                       <span className="text-[10px] text-muted-foreground ml-1.5">(Additional)</span>
                     </div>
                     <Button variant="ghost" size="sm" asChild className="h-7 text-xs px-2.5">

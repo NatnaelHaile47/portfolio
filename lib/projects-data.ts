@@ -152,6 +152,14 @@ export const projectsData: ProjectItem[] = [
       "PostgreSQL schema designed for rapid demographic aggregation and historical record indexing.",
       "Custom Jitsi JWT token generation guaranteeing meeting room privacy and role-based moderator access.",
     ],
+    screenshots: [
+      {
+        src: "/images/projects/opp/opp.png",
+        title: "OPP Membership System & Demographic Analytics",
+        description:
+          "Live production dashboard displaying member age distribution, gender balance, growth trends, zonal allocation, and integrated Jitsi conference modules.",
+      },
+    ],
     githubLinks: [
       { label: "NatnaelHaile47 (Primary)", url: primaryGithub, isPrimary: true },
       { label: "NatnaelWalletbirr (Additional)", url: additionalGithub },
@@ -192,6 +200,32 @@ export const projectsData: ProjectItem[] = [
       "Next.js full-stack architecture with Prisma ORM for type-safe database queries.",
       "Responsive UI built with Tailwind CSS optimized for administrative desktop monitors and tablets.",
       "Client-side search and filtering for thousands of household records in milliseconds.",
+    ],
+    screenshots: [
+      {
+        src: "/images/projects/kebele/socio-economic.png",
+        title: "Socio-Economic & Demographics Overview",
+        description:
+          "High-level municipal dashboard reporting total population, municipal land usage (hectares), kebele units, gender, age cohorts, and social base occupation metrics.",
+      },
+      {
+        src: "/images/projects/opp/opp-dashboard-1.png",
+        title: "Resident Population Registry & Identity Verification",
+        description:
+          "Official Kebele citizen registry showing citizen names, National IDs, mobile contacts, age verification, and administrative clearance controls.",
+      },
+      {
+        src: "/images/projects/opp/opp-dashboard-2.png",
+        title: "Quarterly Sector Data Entry Modal",
+        description:
+          "Dynamic administrative modal for entering education, social sector, and public service statistics organized by administrative quarter.",
+      },
+      {
+        src: "/images/projects/opp/opp-dashboard-3.png",
+        title: "Municipal Data Records & Report Export",
+        description:
+          "Central data ledger for municipal reporting with record actions, data filtering, and one-click export capability.",
+      },
     ],
     githubLinks: [
       { label: "NatnaelHaile47 (Primary)", url: primaryGithub, isPrimary: true },
@@ -300,6 +334,14 @@ export const projectsData: ProjectItem[] = [
       "Database transaction wrappers ensuring zero double-spending or partial debit/credits.",
       "RESTful API integration endpoints for mobile money and external bank gateways.",
     ],
+    screenshots: [
+      {
+        src: "/images/projects/binget/corebanking.png",
+        title: "Core Banking Administration & Financial Operations",
+        description:
+          "Mission-critical core banking system console for managing customer accounts, deposit balancing, loan amortizations, and daily ledger accounting.",
+      },
+    ],
     githubLinks: [
       { label: "NatnaelHaile47 (Primary)", url: primaryGithub, isPrimary: true },
       { label: "NatnaelWalletbirr (Additional)", url: additionalGithub },
@@ -338,6 +380,14 @@ export const projectsData: ProjectItem[] = [
       "React Native mobile front-end with secure token storage and biometric unlock.",
       "Node.js asynchronous event-driven backend handling thousands of simultaneous transactions.",
     ],
+    screenshots: [
+      {
+        src: "/images/projects/binget/bingetbirr.jpg",
+        title: "BingetBirr Mobile Money Interface",
+        description:
+          "Consumer and merchant mobile wallet interface featuring quick money transfers, cash-out agents, bill payments, and transaction history.",
+      },
+    ],
     githubLinks: [
       { label: "NatnaelHaile47 (Primary)", url: primaryGithub, isPrimary: true },
       { label: "NatnaelWalletbirr (Additional)", url: additionalGithub },
@@ -372,6 +422,14 @@ export const projectsData: ProjectItem[] = [
     architectureHighlights: [
       "Dashboard components with real-time operational status graphs.",
       "Fine-grained administrative permission guards.",
+    ],
+    screenshots: [
+      {
+        src: "/images/projects/binget/cms.png",
+        title: "BingetBirr Operations & CMS Management Portal",
+        description:
+          "Centralized back-office portal for KYC validation, dispute handling, tier fee schedules, and agent network monitoring.",
+      },
     ],
     githubLinks: [
       { label: "NatnaelHaile47 (Primary)", url: primaryGithub, isPrimary: true },

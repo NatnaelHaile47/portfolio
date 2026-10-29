@@ -104,9 +104,14 @@ export function Hero() {
 
         {/* Social Links */}
         <div className="flex justify-center items-center space-x-4 mt-8">
-          <Button variant="ghost" size="icon" asChild className="rounded-full hover:bg-primary/10 hover:text-primary" title="Primary GitHub: NatnaelWalletbirr">
+          <Button variant="ghost" size="icon" asChild className="rounded-full hover:bg-primary/10 hover:text-primary" title="Primary GitHub: NatnaelHaile47">
             <a href={primaryGithubUrl} target="_blank" rel="noopener noreferrer" aria-label="Natnael's Primary GitHub">
               <Github className="h-5 w-5" />
+            </a>
+          </Button>
+          <Button variant="ghost" size="icon" asChild className="rounded-full hover:bg-primary/10 hover:text-primary" title="Additional GitHub: NatnaelWalletbirr">
+            <a href={additionalGithubUrl} target="_blank" rel="noopener noreferrer" aria-label="Natnael's Additional GitHub">
+              <Github className="h-5 w-5 text-muted-foreground hover:text-foreground" />
             </a>
           </Button>
           <Button variant="ghost" size="icon" asChild className="rounded-full hover:bg-primary/10 hover:text-primary" title="LinkedIn Profile">
